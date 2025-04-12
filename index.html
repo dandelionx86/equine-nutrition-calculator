@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horse Nutrition Calculator</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <h1>Horse Nutrition Calculator</h1>
+
+  <form id="nutritionForm">
+    <label>
+      Horse Weight (lbs):
+      <input type="number" id="weight" required />
+    </label>
+    <label>
+      Birth Date:
+      <input type="date" id="birthdate" />
+    </label>
+    <label>
+      Physiological Status:
+      <select id="status">
+        <option value="maintenance">Maintenance</option>
+        <option value="exercise">Exercise</option>
+      </select>
+    </label>
+    <label>
+      Exercise Level:
+      <select id="exerciseLevel" required>
+        <option value="">--Select--</option>
+        <option value="light">Light</option>
+        <option value="moderate">Moderate</option>
+        <option value="intense">Intense</option>
+      </select>
+    </label>
+
+    <div id="feedsContainer">
+      <div class="feedEntry">
+        <label>
+          Select Feed:
+          <select class="feed" required>
+            <option value="">--Select Feed--</option>
+            <option value="timothy">Timothy Hay</option>
+            <option value="alfalfa">Alfalfa Hay</option>
+            <option value="beetPulp">Beet Pulp</option>
+          </select>
+        </label>
+        <label>
+          Amount (lbs/day):
+          <input type="number" step="0.1" class="amount" required />
+        </label>
+      </div>
+    </div>
+
+    <button type="button" onclick="addFeedEntry()">Add Another Feed</button>
+    <button type="submit">Calculate</button>
+  </form>
+
+  <div class="results" id="results"></div>
+</body>
+</html>

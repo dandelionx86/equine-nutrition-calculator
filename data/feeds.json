@@ -1,0 +1,27 @@
+{
+    "timothy": {
+      "dryMatter": 0.89,
+      "digestibleEnergy": 0.91,
+      "crudeProtein": 10,
+      "calcium": 0.4,
+      "phosphorus": 0.25,
+      "vitaminE": 20
+    },
+    "alfalfa": {
+      "dryMatter": 0.92,
+      "digestibleEnergy": 1.0,
+      "crudeProtein": 17,
+      "calcium": 1.2,
+      "phosphorus": 0.26,
+      "vitaminE": 35
+    },
+    "beetPulp": {
+      "dryMatter": 0.9,
+      "digestibleEnergy": 1.3,
+      "crudeProtein": 8,
+      "calcium": 0.6,
+      "phosphorus": 0.1,
+      "vitaminE": 5
+    }
+  }
+  
