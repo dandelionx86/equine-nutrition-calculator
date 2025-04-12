@@ -138,13 +138,20 @@ document.addEventListener("DOMContentLoaded", () => {
       // Start building the HTML for the results table
       let results = `<h2>Diet Evaluation</h2><table><thead><tr><th>Nutrient</th><th>Requirement</th><th>Intake</th><th>% Met</th><th>Status</th></tr></thead><tbody>`;
 
+      function formatValue(value, nutrient) {
+        if (nutrient === "protein") return value.toFixed(0);
+        if (nutrient === "vitaminE") return value.toFixed(0);
+        if (nutrient === "energy") return value.toFixed(1);
+        return value.toFixed(1); // for calcium, phosphorus, etc.
+      }
+
       // For each nutrient, calculate the percentage met and add a row to the table
       nutrients.forEach((nutrient) => {
         const percent = ((total[nutrient] / req[nutrient]) * 100).toFixed(1);
         results += `<tr>
-        <td>${labels[nutrient]}</td>
-        <td>${req[nutrient].toFixed(2)}</td>
-        <td>${total[nutrient].toFixed(2)}</td>
+         <td>${labels[nutrient]}</td>
+        <td>${formatValue(req[nutrient], nutrient)}</td>
+        <td>${formatValue(total[nutrient], nutrient)}</td>
         <td>${percent}%</td>
         <td>${status(total[nutrient], req[nutrient])}</td>
       </tr>`;
