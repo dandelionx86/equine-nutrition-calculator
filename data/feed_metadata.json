@@ -1,0 +1,67 @@
+{
+  "feed_001": {
+    "name": "Timothy Hay",
+    "type": "forage",
+    "original_key": "timothy_hay"
+  },
+  "feed_002": {
+    "name": "Alfalfa Hay",
+    "type": "forage",
+    "original_key": "alfalfa_hay"
+  },
+  "feed_003": {
+    "name": "Beet Pulp",
+    "type": "concentrate",
+    "original_key": "beet_pulp"
+  },
+  "feed_004": {
+    "name": "Orchardgrass Hay",
+    "type": "forage",
+    "original_key": "orchardgrass_hay"
+  },
+  "feed_005": {
+    "name": "Bermudagrass Hay",
+    "type": "forage",
+    "original_key": "bermudagrass_hay"
+  },
+  "feed_006": {
+    "name": "Coastal Hay",
+    "type": "forage",
+    "original_key": "coastal_hay"
+  },
+  "feed_007": {
+    "name": "Oats",
+    "type": "concentrate",
+    "original_key": "oats"
+  },
+  "feed_008": {
+    "name": "Corn",
+    "type": "concentrate",
+    "original_key": "corn"
+  },
+  "feed_009": {
+    "name": "Barley",
+    "type": "concentrate",
+    "original_key": "barley"
+  },
+  "feed_010": {
+    "name": "Rice Bran",
+    "type": "concentrate",
+    "original_key": "rice_bran"
+  },
+  "feed_011": {
+    "name": "Soybean Meal",
+    "type": "concentrate",
+    "original_key": "soybean_meal"
+  },
+  "feed_012": {
+    "name": "Wheat Middlings",
+    "type": "concentrate",
+    "original_key": "wheat_middlings"
+  },
+  "feed_013": {
+    "name": "Flaxseed Meal",
+    "type": "concentrate",
+    "original_key": "flaxseed_meal"
+  }
+}
