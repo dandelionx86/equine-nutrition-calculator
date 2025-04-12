@@ -145,13 +145,34 @@ document.addEventListener("DOMContentLoaded", () => {
         return value.toFixed(1); // for calcium, phosphorus, etc.
       }
 
+      function getUnit(nutrient) {
+        switch (nutrient) {
+          case "energy":
+            return "Mcal"; //Megacalories
+          case "protein":
+            return "g"; //Grams (commonly used for protein)
+          case "calcium":
+            return "g"; //Grams for minerals
+          case "phosphorus":
+            return "g";
+          case "vitaminE":
+            return "IU"; //International Units
+          default:
+            return "";
+        }
+      }
+
       // For each nutrient, calculate the percentage met and add a row to the table
       nutrients.forEach((nutrient) => {
         const percent = ((total[nutrient] / req[nutrient]) * 100).toFixed(1);
         results += `<tr>
-         <td>${labels[nutrient]}</td>
-        <td>${formatValue(req[nutrient], nutrient)}</td>
-        <td>${formatValue(total[nutrient], nutrient)}</td>
+        <td>${labels[nutrient]}</td>
+        <td>${formatValue(req[nutrient], nutrient)} ${getUnit(
+          nutrient
+        )}</td>        
+        <td>${formatValue(total[nutrient], nutrient)} ${getUnit(
+          nutrient
+        )}</td>        
         <td>${percent}%</td>
         <td>${status(total[nutrient], req[nutrient])}</td>
       </tr>`;
